@@ -1,13 +1,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <sis/time.h>
+
+
 #define MAX 1000
 
 int main(void)
 {
 	double A[MAX][MAX], x[MAX], y[MAX];
-	double r;
+	double r, elapsedTime;
 	int i,j;
+	struct t2,t1;
+	{
+		
+	};
 
 	//initialization
 	srand(time(NULL));
@@ -33,5 +41,11 @@ int main(void)
 		
 	}
 	gettimeofday(&t2,NULL);
+	elapsedTime = (t2.tv_sec -t1.tv_sec)*1000.0;//seg a ms
+	elapsedTime += (t2.tv_usec -t1.tv_usec)/1000.0;//us a ms
+
+	printf("first case %f\n",elapsedTime);
+
+	return 0;
 }
 	
