@@ -21,5 +21,17 @@ int main(void)
 		x[i]=r;
 		y[i]=0;
 	}
+	printf("intialized\n");
+
+	gettimeofday(&t1,NULL);
+	for (int i = 0; i < MAX; ++i)
+	{
+		for (int j = 0; j < MAX; j++)
+		{
+			y[i]+= A[i][j]*x[j];
+		}
+		
+	}
+	gettimeofday(&t2,NULL);
 }
 	
